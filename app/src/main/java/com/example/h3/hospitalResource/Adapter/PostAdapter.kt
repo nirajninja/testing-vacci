@@ -1,15 +1,13 @@
-package com.example.h3.Adapter
+package com.example.h3.hospitalResource.Adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.h3.R
-import com.example.h3.modal2.postItem
-import org.w3c.dom.Text
+import com.example.h3.hospitalResource.Adapter.modal2.postItem
 
 class PostAdapter(private val context: Context,private var postList:ArrayList<postItem>):RecyclerView.Adapter<PostAdapter.postViewHolder>() {
 
@@ -37,6 +35,7 @@ class PostAdapter(private val context: Context,private var postList:ArrayList<po
         holder.availableICU.text=post.NET_AVAILABLE_ICU
         holder.availableICUwithVenti.text=post.NET_AVAILABLE_ICU_WITH_VENTILATOR
 
+
     }
 
     override fun getItemCount(): Int = postList.size
@@ -53,6 +52,9 @@ class PostAdapter(private val context: Context,private var postList:ArrayList<po
         val availableICU:TextView = itemView.findViewById(R.id.availableICU)
         val allocatedICUwithventi:TextView = itemView.findViewById(R.id.allocaedicuwithventi)
         val availableICUwithVenti:TextView = itemView.findViewById(R.id.availableICUwithventi)
+
+
+
 
        // val title:TextView=itemView.findViewById(R.id.title)
     }

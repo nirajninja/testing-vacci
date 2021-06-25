@@ -1,16 +1,20 @@
 package com.example.h3.vaccin
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.h3.R
 
 // on below line we are creating our adapter class
 // in this class we are passing our array list
 // and our View Holder class which we have created.
-class CenterRVAdapter(private val centerList: List<CenterRvModal>) :
+class CenterRVAdapter(private val centerList: List<CenterRvModal>,private val context: Context) :
     RecyclerView.Adapter<CenterRVAdapter.CenterRVViewHolder>() {
 
     // on below line we are creating our view holder class which will
@@ -64,5 +68,17 @@ class CenterRVAdapter(private val centerList: List<CenterRvModal>) :
         holder.centerAgeLimitTV.text = "Age Limit : " + currentItem.ageLimit.toString()
         holder.centerFeeTypeTV.text = currentItem.fee_type
         holder.avalabilityTV.text = "Availability : " + currentItem.availableCapacity.toString()
+
+
+
+        val add=holder.centerAddressTV.text.toString()
+        holder.centerAddressTV.setOnClickListener {
+            val gmmIntentUri: Uri = Uri.parse("geo:0,0?q=$add")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            context.startActivity(mapIntent)
+
+            Toast.makeText(context,"$add", Toast.LENGTH_LONG).show()
+        }
     }
 }

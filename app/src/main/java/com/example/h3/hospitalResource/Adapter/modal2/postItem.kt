@@ -1,4 +1,4 @@
-package com.example.h3.modal2
+package com.example.h3.hospitalResource.Adapter.modal2
 
 data class postItem(
 

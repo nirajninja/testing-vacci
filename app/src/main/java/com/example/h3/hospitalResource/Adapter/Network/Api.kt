@@ -1,8 +1,6 @@
-package com.example.h3.Network
+package com.example.h3.hospitalResource.Adapter.Network
 
-import com.example.h3.Adapter.Posts
-import com.example.h3.modal2.post
-import com.example.h3.modal2.postItem
+import com.example.h3.hospitalResource.Adapter.modal2.postItem
 import retrofit2.http.GET
 
 interface Api {

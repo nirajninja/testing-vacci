@@ -1,4 +1,4 @@
-package com.example.h3.Network
+package com.example.h3.hospitalResource.Adapter.Network
 
 object Url {
     const val url="https://jsonplaceholder.typicode.com/"

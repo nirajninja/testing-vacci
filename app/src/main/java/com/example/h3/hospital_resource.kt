@@ -7,11 +7,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.h3.Adapter.PostAdapter
-import com.example.h3.Repository.PostRepository
-import com.example.h3.ViewModel.PostViewModel
-import com.example.h3.ViewModel.PostViewModelFactory
-import com.example.h3.modal2.postItem
+import com.example.h3.hospitalResource.Adapter.PostAdapter
+import com.example.h3.hospitalResource.Adapter.Repository.PostRepository
+import com.example.h3.hospitalResource.Adapter.ViewModel.PostViewModel
+import com.example.h3.hospitalResource.Adapter.ViewModel.PostViewModelFactory
+import com.example.h3.hospitalResource.Adapter.modal2.postItem
 
 class hospital_resource : AppCompatActivity() {
 

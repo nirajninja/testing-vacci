@@ -1,11 +1,10 @@
-package com.example.h3.ViewModel
+package com.example.h3.hospitalResource.Adapter.ViewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.h3.Adapter.Posts
-import com.example.h3.Repository.PostRepository
-import com.example.h3.modal2.postItem
+import com.example.h3.hospitalResource.Adapter.Repository.PostRepository
+import com.example.h3.hospitalResource.Adapter.modal2.postItem
 import kotlinx.coroutines.launch
 
 class PostViewModel(private val postRepository: PostRepository): ViewModel() {

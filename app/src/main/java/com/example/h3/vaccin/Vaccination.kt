@@ -65,7 +65,7 @@ class vaccination : AppCompatActivity() {
                 if (pinCode.length != 6) {
 
                     // this method is called when users enter invalid pin code.
-                    Toast.makeText(this@MainActivity, "Please enter valid pin code", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please enter valid pin code", Toast.LENGTH_SHORT).show()
                 } else {
 
                     // if the pincode is correct.
@@ -110,7 +110,7 @@ class vaccination : AppCompatActivity() {
         // below is the method for getting data from API.
         private fun getAppointments(pinCode: String, date: String) {
             val url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=" + pinCode + "&date=" + date
-            val queue = Volley.newRequestQueue(this@MainActivity)
+            val queue = Volley.newRequestQueue(this)
 
             // on below line we are creating a request
             // variable for making our json object request.
@@ -169,7 +169,7 @@ class vaccination : AppCompatActivity() {
                         }
 
                         // on the below line we are passing this list to our adapter class.
-                        centerRVAdapter = CenterRVAdapter(centerList)
+                        centerRVAdapter = CenterRVAdapter(centerList,this)
 
                         // on the below line we are setting layout manager to our recycler view.
                         centersRV.layoutManager = LinearLayoutManager(this)

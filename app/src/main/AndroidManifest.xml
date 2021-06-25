@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.H3">
-        <activity android:name=".vaccin.vaccination"></activity>
+        <activity android:name=".Tracker"></activity>
         <activity android:name=".hospital_resource" />
+        <activity android:name=".vaccin.vaccination" />
+        <activity android:name=".tracker.covidmain_activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
