@@ -7,16 +7,31 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+        android:layout_marginLeft="10dp"
+
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_yellow"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="hospital"
-        android:id="@+id/hospital"
-
+        android:id="@+id/hospit"
         />
 
+
+
     <Button
+        android:backgroundTint="@color/dark_purple2"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,14 +39,31 @@
         android:id="@+id/vaccin"
 
         />
-    <Button
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Covid Tracker"
-        android:id="@+id/Tracker"
 
+        <Button
+            android:textColor="@color/black"
+            android:backgroundTint="@color/dark_yellow"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Covid Tracker"
+            android:id="@+id/Tracker"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
         />
+
 
 
 

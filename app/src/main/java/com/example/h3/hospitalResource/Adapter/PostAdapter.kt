@@ -1,29 +1,46 @@
 package com.example.h3.hospitalResource.Adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.h3.R
+import com.example.h3.hospitalResource.Adapter.modal2.post
 import com.example.h3.hospitalResource.Adapter.modal2.postItem
+import com.example.test.UPItem
 
-class PostAdapter(private val context: Context,private var postList:ArrayList<postItem>):RecyclerView.Adapter<PostAdapter.postViewHolder>() {
+// class PostAdapter(private val context: Context,private var postList:ArrayList<postItem>):RecyclerView.Adapter<PostAdapter.postViewHolder>() {
+
+
+    class PostAdapter(private val context: Context,private var postList:ArrayList<postItem>):RecyclerView.Adapter<PostAdapter.postViewHolder>() {
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): postViewHolder {
 
         return postViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.each_row,parent,false))
+//        return postViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.each_row,parent,false))
+
+
     }
 
     override fun onBindViewHolder(holder: postViewHolder, position: Int) {
 
-            val post=postList[position]
-           // Log.d("TAG","${post.data.regional}")
-//            holder.id.text =post.id.toString()
-//            holder.title.text=post.title
+         //   val post=postList[position]
+
+        val post=postList[position]
+
+      /*  holder.name.text= post.HOSPITAL_NAME
+        holder.location.text=post.LOCATION
+        holder.totalBeds.text=post.TOTAL
+        holder.totalVacant.text=post.VACANT
+        holder.contact.text=post.CONTACT
+        holder.address.text=post.ADDRESS
+        holder.district.text=post.DISTRICT
+        Log.d("TAG","${holder.name}")*/
 
 
         holder.name.text= post.HOSPITAL_NAME
@@ -42,6 +59,18 @@ class PostAdapter(private val context: Context,private var postList:ArrayList<po
 
     class postViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
+//
+//        val name:TextView = itemView.findViewById(R.id.hospitalName)
+//        val location:TextView = itemView.findViewById(R.id.location)
+//        val totalBeds:TextView = itemView.findViewById(R.id.allocatedHDU)
+//        val totalVacant:TextView = itemView.findViewById(R.id.availableHDU)
+//        val contact:TextView = itemView.findViewById(R.id.contact)
+//        val address:TextView = itemView.findViewById(R.id.address)
+//        val district:TextView = itemView.findViewById(R.id.district)
+//
+//
+//
+
 
 
         val name:TextView=itemView.findViewById(R.id.hospitalName)
@@ -52,6 +81,8 @@ class PostAdapter(private val context: Context,private var postList:ArrayList<po
         val availableICU:TextView = itemView.findViewById(R.id.availableICU)
         val allocatedICUwithventi:TextView = itemView.findViewById(R.id.allocaedicuwithventi)
         val availableICUwithVenti:TextView = itemView.findViewById(R.id.availableICUwithventi)
+
+
 
 
 

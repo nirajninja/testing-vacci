@@ -24,8 +24,8 @@
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/address"
-            android:text="Address"
+            android:id="@+id/location"
+            android:text="Loaction :"
             />
 
 
@@ -44,7 +44,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Allocated HDU "
+                    android:text="Total Beds :"
                     />
                 <TextView
                     android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available HDU :"
+                    android:text="Available Beds :"
                     />
 
                 <TextView
@@ -79,52 +79,26 @@
 
         <LinearLayout
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <LinearLayout
+
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Allocated ICU :"
-                    />
+                android:text="Contact :"
+                />
 
-                <TextView
-                    android:id="@+id/allocatedICU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="66"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/contact"
                 android:layout_width="wrap_content"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Available ICU :"
-                    />
-
-                <TextView
-                    android:id="@+id/availableICU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="66"
-                    />
-
-            </LinearLayout>
+                android:text="66sefscnc"
+                />
 
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -136,11 +110,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Allocated ICU with Ventilator :"
+                android:text="Address :"
                 />
 
             <TextView
-                android:id="@+id/allocaedicuwithventi"
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="66"
@@ -155,20 +129,24 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Available Ventilator with ICU :"
+                android:text="district"
                 />
 
             <TextView
-                android:id="@+id/availableICUwithventi"
+                android:id="@+id/district"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="66"
                 />
 
         </LinearLayout>
+
+
 
 
 

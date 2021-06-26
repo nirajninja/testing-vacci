@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
 
+    <color name="bg1">#8ABBE6</color>
+    <color name="bg2">#B6A4DA</color>
+    <color name="bg3">#0B0B0C</color>
+
     <color name="light_red1">#FFCDD2</color>
     <color name="light_green">#00796B</color>
     <color name="light_blue">#00ACC1</color>

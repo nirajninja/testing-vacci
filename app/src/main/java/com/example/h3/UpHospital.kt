@@ -15,26 +15,27 @@ import com.example.h3.hospitalResource.Adapter.ViewModel.PostViewModelFactory
 import com.example.h3.hospitalResource.Adapter.modal2.postItem
 import com.example.test.UPItem
 
-class hospital_resource : AppCompatActivity() {
+class UpHospital : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var postAdapter: PostAdapter
+    private lateinit var UPpostAdapter: UpPostAdapter
     private lateinit var postViewModel: PostViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hospital_resource)
+        setContentView(R.layout.activity_up_hospital)
+
 
 
         initRecyclerView()
 
-//
         val postRepository = PostRepository()
         val viewModelFactory = PostViewModelFactory(postRepository)
         postViewModel = ViewModelProvider(this,viewModelFactory)[PostViewModel::class.java]
-        postViewModel.getPost()
-        postViewModel.postMutableLiveData.observe(this, Observer {
-            postAdapter.setData(it as ArrayList<postItem>)
+        postViewModel.getUP()
+        postViewModel.UPpostMutableLiveData.observe(this, Observer {
+            UPpostAdapter.setData(it as ArrayList<UPItem>)
             recyclerView.visibility= View.VISIBLE
 
         })
@@ -43,15 +44,15 @@ class hospital_resource : AppCompatActivity() {
 
     private fun initRecyclerView() {
 
-        recyclerView = findViewById(R.id.recyclerView)
-        postAdapter= PostAdapter(this, ArrayList())
+        recyclerView = findViewById(R.id.up_recyclerView)
+        UPpostAdapter= UpPostAdapter(this, ArrayList())
         recyclerView.apply {
             setHasFixedSize(true)
-            layoutManager= LinearLayoutManager(this@hospital_resource)
-            adapter = postAdapter
+            layoutManager= LinearLayoutManager(this@UpHospital)
+            adapter = UPpostAdapter
 
         }
     }
 
 
-    }
+}
